@@ -62,7 +62,7 @@
         const prediction = await model.predict(webcam.canvas);
         if (prediction[0].className == "pencil" && prediction[0].probability.toFixed(2) == 1.0) {
           labelContainer.childNodes[0].innerHTML == "A pencil is an object that you write or draw with. It consists of a thin piece of wood with a rod of a black or coloured substance through the middle. If you write or draw something in pencil, you do it using a pencil.";
-        } else if (prediction[1].className == "pencil" && prediction[1].probability.toFixed(2) == 1.0) {
+        } else if (prediction[1].className == "eraser" && prediction[1].probability.toFixed(2) == 1.0) {
           labelContainer.childNodes[0].innerHTML == "eraser, piece of rubber or other material used to rub out marks made by ink, pencil, or chalk. The modern eraser is usually a mixture of an abrasive such as fine pumice, a rubbery matrix such as synthetic rubber or vinyl, and other ingredients.";
         } else {
           labelContainer.childNodes[0].innerHTML == "UNKNOWN";

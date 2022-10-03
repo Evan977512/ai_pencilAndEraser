@@ -61,11 +61,11 @@
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         if (prediction[0].className == "pencil" && prediction[0].probability.toFixed(2) >= 0.9) {
-          labelContainer.childNodes[i].innerHTML == "A pencil is an object that you write or draw with. It consists of a thin piece of wood with a rod of a black or coloured substance through the middle. If you write or draw something in pencil, you do it using a pencil.";
+          labelContainer.childNodes[0].innerHTML == "A pencil is an object that you write or draw with. It consists of a thin piece of wood with a rod of a black or coloured substance through the middle. If you write or draw something in pencil, you do it using a pencil.";
         } else if (prediction[1].className == "pencil" && prediction[1].probability.toFixed(2) >= 0.9) {
-          labelContainer.childNodes[i].innerHTML == "eraser, piece of rubber or other material used to rub out marks made by ink, pencil, or chalk. The modern eraser is usually a mixture of an abrasive such as fine pumice, a rubbery matrix such as synthetic rubber or vinyl, and other ingredients.";
+          labelContainer.childNodes[0].innerHTML == "eraser, piece of rubber or other material used to rub out marks made by ink, pencil, or chalk. The modern eraser is usually a mixture of an abrasive such as fine pumice, a rubbery matrix such as synthetic rubber or vinyl, and other ingredients.";
         } else {
-          labelContainer.childNodes[i].innerHTML == "UNKNOWN";
+          labelContainer.childNodes[0].innerHTML == "UNKNOWN";
         }
         // for (let i = 0; i < maxPredictions; i++) {
         //   const classPrediction = prediction[i].className + ": " + prediction[i].probability.toFixed(2);
